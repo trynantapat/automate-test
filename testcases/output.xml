@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.12.0 on win32)" generated="20231212 19:24:04.414" rpa="false" schemaversion="4">
+<suite id="s1" name="LoginTest" source="C:\Users\tryna\courserobot\automate-test\testcases\LoginTest.robot">
+<kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
+<arg>${baseUrl}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231212 19:24:04.808" level="INFO">Opening browser 'chrome' to base url 'https://futureskill.co/'.</msg>
+<status status="PASS" starttime="20231212 19:24:04.806" endtime="20231212 19:24:09.188"/>
+</kw>
+<test id="s1-t1" name="As a user, I want to login success with valid credential" line="14">
+<kw name="Wait until element is ready then click element" library="CommonKeywords">
+<arg>xpath=//button[text()="สมัครสมาชิก"]</arg>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231212 19:24:09.197" level="INFO">Clicking element 'xpath=//button[text()="สมัครสมาชิก"]'.</msg>
+<msg timestamp="20231212 19:24:11.196" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-166.png"&gt;&lt;img src="selenium-screenshot-166.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20231212 19:24:11.196" level="FAIL">Element with locator 'xpath=//button[text()="สมัครสมาชิก"]' not found.</msg>
+<status status="FAIL" starttime="20231212 19:24:09.195" endtime="20231212 19:24:11.203"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231212 19:24:13.205" level="INFO">Clicking element 'xpath=//button[text()="สมัครสมาชิก"]'.</msg>
+<status status="PASS" starttime="20231212 19:24:13.204" endtime="20231212 19:24:13.983"/>
+</kw>
+<status status="PASS" starttime="20231212 19:24:09.194" endtime="20231212 19:24:13.983"/>
+</kw>
+<status status="PASS" starttime="20231212 19:24:09.193" endtime="20231212 19:24:13.983"/>
+</kw>
+<kw name="Register user" library="RegisKeywords">
+<arg>trynantapat777@gmail.com</arg>
+<arg>NAntapat</arg>
+<arg>Chompoo</arg>
+<arg>0813774389</arg>
+<arg>Aa0983941255</arg>
+<arg>Aa0983941255</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=email</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231212 19:24:13.993" level="INFO">Typing text 'trynantapat777@gmail.com' into text field 'name=email'.</msg>
+<status status="PASS" starttime="20231212 19:24:13.990" endtime="20231212 19:24:14.780"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=firstName</arg>
+<arg>${Firstname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231212 19:24:14.781" level="INFO">Typing text 'NAntapat' into text field 'name=firstName'.</msg>
+<status status="PASS" starttime="20231212 19:24:14.780" endtime="20231212 19:24:14.926"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=lastName</arg>
+<arg>${Lastname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231212 19:24:14.927" level="INFO">Typing text 'Chompoo' into text field 'name=lastName'.</msg>
+<status status="PASS" starttime="20231212 19:24:14.926" endtime="20231212 19:24:15.072"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=phoneNumber</arg>
+<arg>${phoneNumber}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231212 19:24:15.073" level="INFO">Typing text '0813774389' into text field 'name=phoneNumber'.</msg>
+<status status="PASS" starttime="20231212 19:24:15.072" endtime="20231212 19:24:15.213"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=newPassword</arg>
+<arg>${newPassword}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231212 19:24:15.214" level="INFO">Typing text 'Aa0983941255' into text field 'name=newPassword'.</msg>
+<status status="PASS" starttime="20231212 19:24:15.213" endtime="20231212 19:24:15.408"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=confirmPassword</arg>
+<arg>${confirmPassword}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231212 19:24:15.409" level="INFO">Typing text 'Aa0983941255' into text field 'name=confirmPassword'.</msg>
+<status status="PASS" starttime="20231212 19:24:15.408" endtime="20231212 19:24:15.583"/>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>name=consent</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<msg timestamp="20231212 19:24:15.585" level="INFO">Selecting checkbox 'name=consent'.</msg>
+<status status="PASS" starttime="20231212 19:24:15.583" endtime="20231212 19:24:15.727"/>
+</kw>
+<status status="PASS" starttime="20231212 19:24:13.988" endtime="20231212 19:24:15.727"/>
+</kw>
+<kw name="Wait until element is ready then click element" library="CommonKeywords">
+<arg>xpath=//button[text()="สมัครสมาชิก"]</arg>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231212 19:24:15.732" level="INFO">Clicking element 'xpath=//button[text()="สมัครสมาชิก"]'.</msg>
+<status status="PASS" starttime="20231212 19:24:15.731" endtime="20231212 19:24:15.898"/>
+</kw>
+<status status="PASS" starttime="20231212 19:24:15.731" endtime="20231212 19:24:15.898"/>
+</kw>
+<status status="PASS" starttime="20231212 19:24:15.730" endtime="20231212 19:24:15.898"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231212 19:24:20.898" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231212 19:24:15.898" endtime="20231212 19:24:20.898"/>
+</kw>
+<kw name="CheckOtp" library="RegisKeywords">
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${element_text}</var>
+<arg>xpath=//h6[@class='text-center' and contains(text(), 'ระบบได้ส่งรหัส OTP ไปยังเบอร์โทรศัพท์') and span[text()='XX-XXXX-4389']]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231212 19:24:20.938" level="INFO">${element_text} = ระบบได้ส่งรหัส OTP ไปยังเบอร์โทรศัพท์XX-XXXX-4389</msg>
+<status status="PASS" starttime="20231212 19:24:20.900" endtime="20231212 19:24:20.938"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>xpath=//h6[@class='text-center' and contains(text(), 'ระบบได้ส่งรหัส OTP ไปยังเบอร์โทรศัพท์') and span[text()='XX-XXXX-4389']]</arg>
+<arg>ระบบได้ส่งรหัส OTP ไปยังเบอร์โทรศัพท์</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20231212 19:24:20.966" level="INFO">Element 'xpath=//h6[@class='text-center' and contains(text(), 'ระบบได้ส่งรหัส OTP ไปยังเบอร์โทรศัพท์') and span[text()='XX-XXXX-4389']]' contains text 'ระบบได้ส่งรหัส OTP ไปยังเบอร์โทรศัพท์'.</msg>
+<status status="PASS" starttime="20231212 19:24:20.938" endtime="20231212 19:24:20.966"/>
+</kw>
+<status status="PASS" starttime="20231212 19:24:20.898" endtime="20231212 19:24:20.966"/>
+</kw>
+<status status="PASS" starttime="20231212 19:24:09.189" endtime="20231212 19:24:20.966"/>
+</test>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231212 19:24:20.968" endtime="20231212 19:24:23.372"/>
+</kw>
+<status status="PASS" starttime="20231212 19:24:04.418" endtime="20231212 19:24:23.372"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="LoginTest">LoginTest</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20231212 19:24:04.805" level="ERROR">Error in file 'C:\Users\tryna\courserobot\automate-test\testcases\LoginTest.robot' on line 9: Processing variable file 'C:\Users\tryna\courserobot\automate-test\resourse\testdata\testdata.yaml' failed: YAML variable file must be a mapping, got None.</msg>
+</errors>
+</robot>
